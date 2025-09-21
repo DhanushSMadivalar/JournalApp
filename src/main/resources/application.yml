@@ -1,19 +1,18 @@
 spring:
   redis:
-    url: redis://default:3ADPu3rYef6kqVVuwFNuLSdFywRFnvC4@redis-19557.crce206.ap-south-1-1.ec2.redns.redis-cloud.com:19557
-#    port: 19557
-#    password: 3ADPu3rYef6kqVVuwFNuLSdFywRFnvC4
+    url: ${REDIS_URL}
 
   data:
     mongodb:
-      uri: mongodb+srv://dhanushsm619:OoV5UBmcjt36diOM@cluster0.dxmf8ab.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&ssl=true
+      uri: ${MONGODB_URI}
       database: journaldb
       auto-index-creation: true
+
   mail:
     host: smtp.gmail.com
     port: 587
-    username: dhanushsm619@gmail.com
-    password: sxox bvrk pxng gbem
+    username: ${JAVA_EMAIL}
+    password: ${JAVA_EMAIL_PASSWORD}
     properties:
       mail:
         smtp:
@@ -23,4 +22,4 @@ spring:
 
 weather:
   api:
-    key: 82d86047dc672eea85b4b792557d00d8
+    key: ${WEATHER_API_KEY}
